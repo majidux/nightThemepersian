@@ -1,0 +1,3 @@
+rootProject.name = 'nightThemeBlog'
+
+include ':app'
