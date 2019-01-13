@@ -5,6 +5,8 @@ import Sidebar from "../Components/Sidebar";
 import Body from "../Components/Body";
 
 export default class Home extends Component {
+    
+    
     render() {
         return (
             <View style={styles.homeStyle}>

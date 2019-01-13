@@ -16,7 +16,6 @@ export default class Body extends Component {
     }
     
     
-
     // componentDidMount(){
     //     this.fetchData();
     // }
@@ -46,7 +45,7 @@ export default class Body extends Component {
     
     render() {
         return (
-            <View style={styles.body}>
+            <View style={styles.body }>
                 
                 <View style={styles.titleCourse}>
 
@@ -62,6 +61,7 @@ export default class Body extends Component {
                     </View>
                     <View>
                         <Text style={styles.bodyTitle}>درس های من</Text>
+                        <Text style={styles.bodyTitle}>{this.props.title}</Text>
                     </View>
                 </View>
                 
@@ -155,8 +155,12 @@ export default class Body extends Component {
 const styles = StyleSheet.create({
     body: {
         flex: 4,
-        backgroundColor: '#fafafa',
-        // padding: 30,
+        backgroundColor: '#f3f3f3',
+        paddingBottom: 0
+    },
+    darkBody:{
+        flex: 4,
+        backgroundColor: '#202c36',
         paddingBottom: 0
     },
     pickerStyle: {
@@ -213,7 +217,8 @@ const styles = StyleSheet.create({
     boxTitleText: {
         fontSize: 20,
         color: '#000',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: 'Vazir'
     },
     boxDescribeText: {
         fontSize: 11,

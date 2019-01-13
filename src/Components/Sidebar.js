@@ -3,6 +3,7 @@ import {View, Text, StyleSheet, Image, FlatList, TouchableHighlight, Animated,Ea
 import dataSidebar from './DataSidebar';
 import dataSidebar2 from './DataSidebar2';
 
+
 export default class Sidebar extends Component {
     
     constructor(props) {
@@ -10,38 +11,15 @@ export default class Sidebar extends Component {
         this.state = {
             pressStatus: false,
         };
-        this.spinValue = new Animated.Value(0)
-    
     }
     
-    
-    componentDidMount() {
-        this.spin()
-    }
-    
-    spin() {
-        this.spinValue.setValue(0);
-        Animated.timing(
-            this.spinValue,
-            {
-                toValue: 1,
-                duration: 4000,
-                easing: Easing.linear
-            }
-        ).start(() => this.spin())
-    }
+
     
     
     pressStatus = () =>
         this.setState({pressStatus: true});
     
     render() {
-        
-        const spin = this.spinValue.interpolate({
-            inputRange: [0, 1],
-            outputRange: ['0deg', '360deg']
-        });
-        
         
         
         return (
@@ -53,7 +31,6 @@ export default class Sidebar extends Component {
                     ? styles.sidebarDark
                     : styles.sideBar
             }>
-                
                 <View>
                     <View>
                         <View style={styles.titleMenu}>
@@ -162,7 +139,7 @@ const styles = StyleSheet.create({
     sidebarDark: {
         backgroundColor: '#2b3844',
         flex: 1,
-        borderLeftColor: '#f5f5f5',
+        borderLeftColor: '#2b3844',
         borderLeftWidth: 2,
         justifyContent: 'space-between',
     },
