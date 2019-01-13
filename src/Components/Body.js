@@ -8,6 +8,7 @@ export default class Body extends Component {
         super(props);
         this.state = {
             course: '',
+            
             // dataSource:[],
             // lastData:[],
             // loading:false
