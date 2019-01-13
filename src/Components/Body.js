@@ -173,7 +173,8 @@ const styles = StyleSheet.create({
     bodyTitle: {
         fontSize: 25,
         fontWeight: 'bold',
-        color: 'black'
+        color: 'black',
+        fontFamily:'Vazir'
     },
     pickerView: {
         backgroundColor: '#ffffff',
